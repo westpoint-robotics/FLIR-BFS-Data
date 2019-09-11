@@ -44,7 +44,7 @@ void check_start_toggle(std_msgs::String &msg, int &key){
     int hit = -1;
     if(key != ' '){       
         hit = kbhit(key);
-        std::cout << "hit = " << hit << " key = " << key << std::endl;
+        //std::cout << "hit = " << hit << " key = " << key << std::endl;
         if(key == ' '){
             msg.data = "1";
             
@@ -57,7 +57,7 @@ void check_stop_toggle(std_msgs::String &msg, int &key){
     int hit = -1;
     if(key != 'q'){       
         hit = kbhit(key);
-        std::cout << "hit = " << hit << " key = " << key << std::endl;
+        //std::cout << "hit = " << hit << " key = " << key << std::endl;
         if(key == 'q'){
             msg.data = "0";
             
@@ -160,13 +160,13 @@ int main(int argc, char **argv)
     getchar();
     */
     if(msg.data == "0"){
-        std::cout << "call, check_start_toggle()..." << std::endl;
+        //std::cout << "call, check_start_toggle()..." << std::endl;
         check_start_toggle(msg, key);
     }else if(msg.data == "1"){
-        std::cout << "call, check_stop_toggle()... " << std::endl;
+        //std::cout << "call, check_stop_toggle()... " << std::endl;
         check_stop_toggle(msg, key);
     }
-    std::cout << "msg: " << msg.data.c_str() << " key: " << key << std::endl;
+    //std::cout << "msg: " << msg.data.c_str() << " key: " << key << std::endl;
     /*
     if(count % 3){
         msg.data = "0";//ss.str();

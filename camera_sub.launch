@@ -1,0 +1,7 @@
+<launch>
+
+  <node pkg="beginner_tutorials" name="FLIR_Blackfly" type="bool_sub" output="screen">
+      <param name="desiredSN" type="str" value="Blackfly S BFS-U3-31S4C" />
+  </node>
+  
+</launch>
